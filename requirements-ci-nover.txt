@@ -1,0 +1,12 @@
+numpy
+opencv-python
+onnx
+insightface
+psutil
+torch
+torchvision
+onnxruntime
+tensorflow
+opennsfw2
+protobuf
+tqdm
