@@ -21,13 +21,14 @@ if platform.system().lower() == 'darwin':
 
 
 def run_ffmpeg(args: List[str]) -> bool:
-    commands = ['ffmpeg', '-hide_banner', '-hwaccel', 'auto', '-loglevel', roop.globals.log_level]
+    commands = ['/usr/bin/ffmpeg', '-hide_banner', '-hwaccel', 'auto', '-loglevel', roop.globals.log_level]
     commands.extend(args)
     try:
         subprocess.check_output(commands, stderr=subprocess.STDOUT)
         return True
-    except Exception:
-        pass
+    except Exception as e:
+        print(e)
+        print(e.output)
     return False
 
 
